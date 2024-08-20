@@ -4,7 +4,7 @@ pipeline {
 	agent none 
 	environment {
         // Definir variables de entorno
-        DOCKER_REGISTRY_URL = 'https://index.docker.io/v1/' // URL del registro Docker (Docker Hub)
+        DOCKER_REGISTRY_URL = 'docker.io' // URL del registro Docker (Docker Hub)
         DOCKER_CREDENTIALS_ID = 'dockerhub_id' // ID de las credenciales en Jenkins
         IMAGE_NAME = 'my-image' // Nombre de la imagen Docker
         IMAGE_TAG = 'latest' // Etiqueta de la imagen Docker
