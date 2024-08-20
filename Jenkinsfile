@@ -10,7 +10,7 @@ pipeline {
         IMAGE_TAG = 'latest' // Etiqueta de la imagen Docker
     }
 	stages { 
-		/*stage('Maven Install') { 
+		stage('Maven Install') { 
 			agent { 
 				docker { 
 					image 'maven:3.5.0' 
@@ -19,7 +19,7 @@ pipeline {
 			steps { 
 				sh 'mvn clean install' 
 			} 
-		}*/ 
+		}
 		stage('Docker Build') { 
 			agent any 
 			steps { 
