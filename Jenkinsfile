@@ -20,6 +20,16 @@ pipeline {
 				sh 'mvn clean install' 
 			} 
 		}
+		stage('Maven package') { 
+			agent { 
+				docker { 
+					image 'maven:3.5.0' 
+				} 
+			} 
+			steps { 
+				sh 'mvn clean package' 
+			} 
+		}
 		stage('Docker Build') { 
 			agent any 
 			steps { 
